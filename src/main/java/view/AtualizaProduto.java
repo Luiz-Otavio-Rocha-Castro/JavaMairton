@@ -11,14 +11,14 @@ import model.Produto;
  *
  * @author 55889
  */
-public class AdicionaProduto extends javax.swing.JFrame {
+public class AtualizaProduto extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AdicionaProduto.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AtualizaProduto.class.getName());
 
     /**
      * Creates new form AdicionaProduto
      */
-    public AdicionaProduto() {
+    public AtualizaProduto() {
         initComponents();
     }
 
@@ -51,7 +51,7 @@ public class AdicionaProduto extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(51, 51, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel1.setText("Adiciona Produto");
+        jLabel1.setText("Atualiza Produto");
 
         jLabel2.setText("Descrição:");
 
@@ -73,7 +73,7 @@ public class AdicionaProduto extends javax.swing.JFrame {
 
         jTextFieldQuantidade.addActionListener(this::jTextFieldQuantidadeActionPerformed);
 
-        jButtonAdicionar.setText("Adicionar");
+        jButtonAdicionar.setText("Atualizar");
         jButtonAdicionar.addActionListener(this::jButtonAdicionarActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -191,7 +191,7 @@ public class AdicionaProduto extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new AdicionaProduto().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new AtualizaProduto().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
