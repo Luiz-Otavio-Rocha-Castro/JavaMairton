@@ -76,14 +76,18 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here
+        AdicionaProduto adiciona = new AdicionaProduto(); 
+        adiciona.setVisible(true);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-          AtualizaProduto atualiza = new AtualizaProduto(); 
+        
           int busca = Integer.parseInt(JOptionPane.showInputDialog("Digite o codigo desejado: "));
-          GerenciamentoProduto genpro = new GerenciamentoProduto();
+          GerenciamentoProduto genpro = GerenciamentoProduto.getInstance();
           Produto produto = genpro.buscarProduto(busca);
+           AtualizaProduto atualiza = new AtualizaProduto(produto); 
           if(produto == null){
               JOptionPane.showMessageDialog(null,"Produto não encontrado");
           }

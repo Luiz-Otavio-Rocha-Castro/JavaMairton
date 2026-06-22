@@ -12,7 +12,7 @@ public class Loja {
         Tela tela = new Tela();
         tela.setVisible(true);
 
-        GerenciamentoProduto genProd = new GerenciamentoProduto();
+        GerenciamentoProduto genProd = GerenciamentoProduto.getInstance();
         int codigo,quantidade,busca;
         String nome,descricao,categoria,vencimento;
         double preco;

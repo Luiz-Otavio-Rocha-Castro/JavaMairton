@@ -164,9 +164,10 @@ public class AdicionaProduto extends javax.swing.JFrame {
         int quantidade = Integer.parseInt(jTextFieldQuantidade.getText());
         String vencimento = jTextFieldVencimento.getText();
         String categoria = jTextFieldCategoria.getText();
-        GerenciamentoProduto genPro = new GerenciamentoProduto();
+        GerenciamentoProduto genPro = GerenciamentoProduto.getInstance();
         Produto produto = new Produto(nome,descricao,preco,vencimento,quantidade,categoria);
         genPro.adicionarProduto(produto);
+
     }//GEN-LAST:event_jButtonAdicionarActionPerformed
 
     /**

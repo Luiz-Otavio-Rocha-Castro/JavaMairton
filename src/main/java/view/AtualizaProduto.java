@@ -18,8 +18,14 @@ public class AtualizaProduto extends javax.swing.JFrame {
     /**
      * Creates new form AdicionaProduto
      */
-    public AtualizaProduto() {
+    public AtualizaProduto(Produto produto) {
         initComponents();
+        this.jTextFieldNome.setText(produto.getNome());
+        this.jTextFieldDescricao.setText(produto.getDescricao());
+        this.jTextFieldPreco.setText("" + produto.getPreco());
+        this.jTextFieldQuantidade.setText("" + produto.getQuantidade());
+        this.jTextFieldVencimento.setText(produto.getVencimento());
+        this.jTextFieldCategoria.setText(produto.getCategoria());
     }
 
     /**
@@ -164,7 +170,7 @@ public class AtualizaProduto extends javax.swing.JFrame {
         int quantidade = Integer.parseInt(jTextFieldQuantidade.getText());
         String vencimento = jTextFieldVencimento.getText();
         String categoria = jTextFieldCategoria.getText();
-        GerenciamentoProduto genPro = new GerenciamentoProduto();
+        GerenciamentoProduto genPro = GerenciamentoProduto.getInstance();
         Produto produto = new Produto(nome,descricao,preco,vencimento,quantidade,categoria);
         genPro.adicionarProduto(produto);
     }//GEN-LAST:event_jButtonAdicionarActionPerformed

@@ -11,7 +11,7 @@ public class GerenciamentoProduto {
    
     public static int CODIGO = 200;
     private String carrinho;
-    private GerenciamentoProduto instance = null;
+    private static GerenciamentoProduto instance = null;
     private double total;
 
 
@@ -22,7 +22,8 @@ public class GerenciamentoProduto {
     }
     
     public static GerenciamentoProduto getInstance(){
-        instance = new GerenciamentoProduto();
+        if(instance == null){
+             instance = new GerenciamentoProduto();}
         return instance;
     }
     
