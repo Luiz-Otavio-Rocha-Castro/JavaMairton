@@ -11,14 +11,22 @@ public class GerenciamentoProduto {
    
     public static int CODIGO = 200;
     private String carrinho;
+    private GerenciamentoProduto instance = null;
     private double total;
 
 
-    public GerenciamentoProduto() {
+    private GerenciamentoProduto() {
         this.produtos = new LinkedList<Produto>();
         this.carrinho = "";
         this.total = 0;
     }
+    
+    public static GerenciamentoProduto getInstance(){
+        instance = new GerenciamentoProduto();
+        return instance;
+    }
+    
+    
     public void adicionarProduto(Produto produto) {
         this.produtos.add(produto);
     }
@@ -73,7 +81,7 @@ public class GerenciamentoProduto {
         public String verCarrinho(){
             return this.carrinho + "\nTotal: " + this.total + "\n";
         }
-
+        /*
         public String verificarEstoque(int margem){
             int i;
             String conteudo = "";
@@ -120,5 +128,5 @@ public class GerenciamentoProduto {
         this.total = 0;
         return conteudo;
     }
-
+    */
 }

@@ -10,7 +10,7 @@ public class Produto {
     private String vencimento;
     private int quantidade;
     private String categoria;
-0
+
     public Produto(String nome, String descricao, double preco, String vencimento, int quantidade, String categoria) {
         this.setCodigo(GerenciamentoProduto.CODIGO);
         this.setNome(nome);

@@ -1,4 +1,7 @@
 com\mycompany\loja\Loja.class
 control\GerenciamentoProduto.class
-view\Tela.class
+view\AtualizaProduto.class
 model\Produto.class
+view\AdicionaProduto.class
+view\Home.class
+view\Tela.class

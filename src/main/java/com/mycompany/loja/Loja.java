@@ -12,16 +12,18 @@ public class Loja {
         Tela tela = new Tela();
         tela.setVisible(true);
 
-        GerenciamentoProduto genProd = new GerenciamentoProduto(5);
+        GerenciamentoProduto genProd = new GerenciamentoProduto();
         int codigo,quantidade,busca;
         String nome,descricao,categoria,vencimento;
         double preco;
         boolean controle = true;
         while(controle) {
-            int opcao = Integer.parseInt(JOptionPane.showInputDialog("Sistema de gerenciamento de produtos\n" + "1 - Inserir produto\n" +
+            /*int opcao = Integer.parseInt(JOptionPane.showInputDialog("Sistema de gerenciamento de produtos\n" + "1 - Inserir produto\n" +
                     "2 - listar produtos\n3 - buscar produto\n4 - excluir produto" +
                     "\n5 - editar produto\n6 - adicionar no carrinho\n7 - ver carrinho\n8 - verificar estoque" +
                     "\n9 - finalizar compra\n0 - sair\nSelecione uma opção:"));
+            
+            
             switch(opcao) {
                 case 1:
                     //codigo = Integer.parseInt(JOptionPane.showInputDialog("Digite o codigo do produto: "));
@@ -85,7 +87,7 @@ public class Loja {
                 case 7:
                     JOptionPane.showMessageDialog(null,genProd.verCarrinho());
                     break;
-                case 8:
+                /*case 8:
                     int margem = Integer.parseInt(JOptionPane.showInputDialog("Digite a margem desejada: "));
                     if(margem == 0){
                         JOptionPane.showInputDialog(null,genProd.verificarEstoque());
@@ -97,14 +99,16 @@ public class Loja {
                 case 9:
                     JOptionPane.showMessageDialog(null,genProd.finalizarCompra());
                     break;
+                 
                 case 0:
                     controle = false;
                     JOptionPane.showMessageDialog(null, "Saindo do sistema");
 
             }
+            */
         }
 
-
+          
 
     }
 }
